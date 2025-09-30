@@ -10,3 +10,4 @@ The goal of this project is to design test cases, execute them, and document bug
 ## Files
 - `test_cases.md` → Contains test cases for the Automation Practice Form.
 - `bug_report.md` → Contains bugs/issues found during testing.
+- `11_alerts_testing.md` → Contains test cases for the DemoQA Alerts page.
