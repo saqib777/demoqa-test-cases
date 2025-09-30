@@ -8,6 +8,7 @@
 | TC-AL-02 | Verify alert with "OK" and "Cancel" | Click button to trigger confirm alert | Alert should allow "OK" or "Cancel" selection | Both options work correctly | Pass |
 | TC-AL-03 | Verify alert with prompt input | Trigger prompt alert | User can enter text and confirm | Input is accepted and displayed correctly | Pass |
 | TC-AL-04 | Verify timing alert | Click button with 5-second timer | Alert should appear after 5 seconds | Works correctly | Pass |
+| TC-AL-05 | Verify prompt alert cancel option | Trigger a prompt alert and click Cancel | The prompt should close without displaying text | Works as expected | Pass
 
 ## Notes
 - All tested alerts behaved as expected.  
