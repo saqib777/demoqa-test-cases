@@ -15,3 +15,11 @@
 ## Notes
 - All tested alerts behaved as expected.  
 - No functional bugs were found during testing.
+- All test cases resulted as expected with no error.
+- The alert text was consistent with requirements.
+- Delay time for timed alert was approximately 5 seconds.
+- No styling issues observed in the alert box.
+- Browser prevented interaction with the page until alert was handled.
+- Prompt alert accepted both empty and filled input.
+- Tested in Chrome & Edge — behavior was the same.
+- On mobile view, alerts also appeared correctly.
