@@ -61,5 +61,3 @@
 
 ---
 
-If you like, I can also **package this file in the ZIP** for your repo and send you the updated archive so you can just push. Do you want me to do that?
-::contentReference[oaicite:0]{index=0}
