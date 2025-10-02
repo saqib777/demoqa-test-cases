@@ -1,52 +1,42 @@
-# Checkbox Page Testing — https://demoqa.com/checkbox
+# DemoQA Checkbox Testing
 
-## Page Under Test
-- **URL:** https://demoqa.com/checkbox  
-- **Feature:** Hierarchical checkboxes (Home, Desktop, Documents, Downloads etc.) with expandable tree structure.
+This document contains **15 detailed test cases** for verifying the functionality of the [DemoQA Checkbox page](https://demoqa.com/checkbox).
 
 ---
 
 ## Test Cases
 
-| Test Case ID | Test Scenario | Steps | Expected Result | Actual Result | Status |
-|--------------|----------------|-------|------------------|----------------|--------|
-| TC-CB-01 | Expand “Home” node | Click expand arrow next to Home | Child nodes (Desktop, Documents, Downloads) should display | — | Pass |
-| TC-CB-02 | Select a leaf node (Desktop) | Expand Home → expand Desktop → click checkbox next to “Notes” | Only “Notes” should be selected; parent may show partial state | — | Pass |
-| TC-CB-03 | Select parent node (Documents) | Click checkbox next to “Documents” | All children under Documents should get selected | — | Pass |
-| TC-CB-04 | Deselect child after parent selected | After selecting Documents, deselect one child | Parent’s checkbox should show partial (indeterminate) state | — | Pass |
-| TC-CB-05 | Select multiple branches | Select nodes in multiple branches (Desktop, Downloads) | All selected should appear in output section | — | Pass |
-| TC-CB-06 | Unselect root (Home) while children selected | Click checkbox next to Home when all children are selected | All checkboxes should become unselected | — | Pass |
-| TC-CB-07 | Verify output display | After selections, the “You have selected :” section should list selected leaf nodes | — | Pass |
-| TC-CB-08 | Uncheck leaf node under hierarchy | Expand and uncheck a previously checked node | Output section should update removing that node | — | Pass |
-| TC-CB-09 | Expand/collapse behavior | Expand then collapse a node | Child nodes should hide when collapsed | — | Pass |
-| TC-CB-10 | Persistent state after refresh | Select some nodes → refresh the page | Selections should reset (page behavior) | — | Pass |
+| Test Case ID | Description | Steps | Expected Result |
+|--------------|-------------|-------|-----------------|
+| CB_01 | Verify that the main checkbox expands all options when clicked. | 1. Go to the page. <br> 2. Click the dropdown arrow next to "Home". | All nested checkboxes should expand and be visible. |
+| CB_02 | Verify selecting the root checkbox selects all child checkboxes. | 1. Click the "Home" checkbox. | All nested checkboxes under "Home" should be automatically checked. |
+| CB_03 | Verify deselecting the root checkbox clears all child checkboxes. | 1. Check "Home". <br> 2. Uncheck "Home". | All nested checkboxes should be unchecked. |
+| CB_04 | Verify selecting an intermediate node checkbox (e.g., "Desktop") selects its children. | 1. Expand "Home". <br> 2. Click "Desktop". | Both "Notes" and "Commands" checkboxes should be checked. |
+| CB_05 | Verify deselecting an intermediate node clears its children. | 1. Select "Desktop". <br> 2. Unselect "Desktop". | "Notes" and "Commands" should be unchecked. |
+| CB_06 | Verify individual leaf node selection works correctly. | 1. Expand "Desktop". <br> 2. Select only "Notes". | Only "Notes" should be checked. |
+| CB_07 | Verify partially selected parent node is displayed correctly. | 1. Expand "Desktop". <br> 2. Select "Notes" only. | "Desktop" checkbox should show partially checked state. |
+| CB_08 | Verify text output updates according to selected checkboxes. | 1. Select "Documents". <br> 2. Observe the output below the checkbox tree. | Selected checkbox names should be displayed correctly. |
+| CB_09 | Verify that expanding and collapsing nodes works consistently. | 1. Expand "Home". <br> 2. Collapse "Home". | Checkboxes toggle visibility without losing state. |
+| CB_10 | Verify state persistence on multiple actions. | 1. Select "Documents". <br> 2. Collapse "Home". <br> 3. Expand "Home" again. | Previously selected checkboxes remain checked. |
+| CB_11 | Verify multiple selections across different branches. | 1. Select "Desktop > Notes". <br> 2. Select "Documents > Word File". | Both checkboxes remain selected independently. |
+| CB_12 | Verify deselecting a child updates the parent state correctly. | 1. Select "Desktop". <br> 2. Deselect "Notes". | "Desktop" should show partially checked state. |
+| CB_13 | Verify that the UI handles long click or double click. | 1. Double click on "Home" checkbox. | Only one click action should be triggered, not multiple toggles. |
+| CB_14 | Verify responsiveness on different screen sizes. | 1. Resize the browser window (mobile/tablet). | Checkboxes and expand/collapse arrows should remain usable and aligned. |
+| CB_15 | Verify accessibility with keyboard navigation. | 1. Use **Tab** and **Space/Enter** to navigate and toggle checkboxes. | All checkboxes should be accessible and selectable via keyboard. |
 
 ---
 
-## Notes / Observations
+## Notes
 
-- Tested using Chrome 128 on Windows 10.  
-- Output section (below) shows selected items with full paths (e.g. “desktop > notes”).  
-- Parent nodes use indeterminate state (partially selected) when not all children are checked.  
-- On refresh, checkbox selections are cleared (expected for this demo page).  
-- No validation or constraint logic — the page seems lenient in selection behavior.  
-
----
-
-## Recommendations / Potential Bugs
-
-1. **No limitation on selecting multiple nodes**  
-   - **Expected:** Some UI may restrict disallowed combinations, but here all combinations allowed.  
-   - **Severity:** Low (for demo pages).  
-
-2. **Indeterminate behavior not obvious**  
-   - **Expected:** Parent checkbox should clearly indicate partial selection (maybe via styling).  
-   - **Actual:** Visual feedback is minimal or not obvious.  
-   - **Severity:** Minor  
-
-3. **No validation of child selections before submission**  
-   - **Expected:** Perhaps a “Submit” button could enforce at least one selection.  
-   - **Actual:** Demo page does not have explicit submit, just shows output.  
+-  **Selection Hierarchy**: Parent-child relationships should remain consistent — selecting a parent selects all children, and partial selection is reflected visually.  
+-  **Partial State**: Parents should clearly indicate when only some children are selected.  
+-  **Output Accuracy**: The selected checkbox list must match user interactions in real-time.  
+-  **Persistence**: State should remain unchanged after collapsing/expanding.  
+-  **Usability**: Actions like double click or long click must not cause duplicate behavior.  
+-  **Cross-Device Testing**: Ensure the checkbox tree works correctly on mobile, tablet, and desktop views.  
+-  **Accessibility**: Screen readers, keyboard navigation, and focus states must be supported.  
+-  **Performance**: Expanding/collapsing nodes should be smooth, even with multiple selections.  
+-  **Edge Cases**: Test rapid clicks, selecting/deselecting quickly, or using unusual input patterns.  
 
 ---
 
