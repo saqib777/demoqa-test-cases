@@ -28,7 +28,7 @@ This document contains **15 detailed test cases** for verifying the functionalit
 
 ## Notes
 
--  **Selection Hierarchy**: Parent-child relationships should remain consistent — selecting a parent selects all children, and partial selection is reflected visually.  
+-  **Selection Hierarchy**: Parent-child relationships should remain consistent, selecting a parent selects all children, and partial selection is reflected visually.  
 -  **Partial State**: Parents should clearly indicate when only some children are selected.  
 -  **Output Accuracy**: The selected checkbox list must match user interactions in real-time.  
 -  **Persistence**: State should remain unchanged after collapsing/expanding.  
