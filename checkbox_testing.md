@@ -40,4 +40,66 @@ This document contains **15 detailed test cases** for verifying the functionalit
 
 ---
 
+**Explanations for Checkbox Test Cases**
+
+1. Main Checkbox Expands Options
+
+ - Ensures the tree structure is accessible. If expansion doesn’t work, users cannot reach nested checkboxes, making the feature useless.
+
+2. Root Checkbox Selects All Children
+
+ - Confirms parent-to-child relationship. If broken, users may wrongly assume all child items are selected while some are not, leading to incomplete actions.
+
+3. Root Checkbox Deselect Clears All Children
+
+  - Prevents inconsistent states. Without this, children could remain checked even after the parent is unchecked, causing confusion.
+
+4. Intermediate Node Selects Its Children
+
+ - Validates that middle-level nodes (like Desktop) control their children. If missing, users must manually check each leaf, reducing usability.
+
+5. Intermediate Node Deselect Clears Its Children
+
+ - Ensures reversibility. A parent should uncheck all its children when deselected. Otherwise, selections may not reflect intended user actions.
+
+6. Individual Leaf Node Selection
+
+ - Checks independence of leaf nodes. Prevents situations where checking one leaf accidentally selects unrelated nodes.
+
+7. Partial Parent Selection State
+
+ - Visual feedback for partially checked parents is critical. Without it, users may think all or none of the children are selected, which is misleading.
+
+8. Text Output Updates Correctly
+
+ - Validates synchronization between UI and displayed results. Incorrect output could mislead users or break downstream processes that rely on it.
+
+9. Expand/Collapse Consistency
+
+ - Ensures visibility toggling works without errors. If state is lost, users may need to reselect checkboxes, wasting effort.
+
+10. State Persistence After Multiple Actions
+
+ - Confirms selections survive collapse/expand cycles. Without persistence, UI resets could lead to accidental data loss.
+
+11. Multiple Selections Across Branches
+
+ - Ensures independence of selections in different branches. Prevents a bug where one branch’s selection overrides another.
+
+12. Deselecting Child Updates Parent State
+
+ - Parent checkboxes must dynamically reflect child changes. Missing this could show a parent as fully selected even if one child is unchecked.
+
+13. Handling Double Clicks / Long Clicks
+
+ - Protects against duplicate toggle events. If not handled, double clicks may accidentally deselect immediately after selecting.
+
+14. Responsiveness Across Devices
+
+ - Confirms mobile and tablet usability. If UI breaks on small screens, users may be unable to interact with checkboxes at all.
+
+15. Keyboard Accessibility
+
+ - Ensures compliance with accessibility standards. Users relying on keyboard navigation must be able to select checkboxes without a mouse.
+
 
