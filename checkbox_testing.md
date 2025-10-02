@@ -50,14 +50,4 @@
 
 ---
 
-## How to Add This File in GitHub
 
-1. Go to your GitHub repo → **Add file → Create new file**.  
-2. Name the file `checkbox_testing.md`.  
-3. Paste the above content into it.  
-4. Commit to `main` or open a PR.  
-
----
-
-If you like, I can also bundle this into your project’s ZIP and send the updated archive. Do you want me to do that?
-::contentReference[oaicite:0]{index=0}
