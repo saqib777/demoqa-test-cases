@@ -111,3 +111,49 @@
 
 ---
 
+## General Notes for Radio Button Testing
+
+1. **Mutual Exclusivity**  
+   - Only one radio button in a group should be selectable at a time.  
+   - Ensure no scenario exists where two options appear selected simultaneously.
+
+2. **Disabled State Validation**  
+   - Disabled options (“No”) should remain unclickable and provide no feedback.  
+   - Confirms that the system prevents invalid selections.
+
+3. **UI Feedback**  
+   - The output message must always match the selected radio option exactly.  
+   - Typos or incorrect mapping reduce user trust.
+
+4. **Cross-Browser Compatibility**  
+   - Test across browsers (Chrome, Firefox, Edge, Safari) to ensure consistent behavior.  
+   - Special attention to keyboard navigation differences between browsers.
+
+5. **Responsiveness**  
+   - On smaller screens, the radio buttons and output message should remain visible and usable.  
+   - Verify no layout breaking or overlapping text.
+
+6. **Accessibility Considerations**  
+   - Radio buttons must be accessible via keyboard (Tab, Arrow keys, Space/Enter).  
+   - Labels should be properly linked with inputs (`<label for="id">`).  
+   - Screen readers should announce the selected option correctly.
+
+7. **Performance / Stress Testing**  
+   - Rapid or repeated clicks should not freeze UI or delay message updates.  
+   - Helps check robustness under fast user interactions.
+
+8. **Reset and Refresh Behavior**  
+   - Refreshing or reloading the page should reset the state to “no option selected”.  
+   - Confirms correct default state handling.
+
+9. **Visual Indicators**  
+   - Selected state must be clearly distinguishable (color or marker).  
+   - Disabled state must look different from active options to avoid confusion.
+
+10. **Error Prevention**  
+    - Users should never end up in an undefined state (e.g., blank message after valid selection).  
+    - The system should always provide clear feedback for any valid action.
+
+---
+
+
