@@ -37,11 +37,4 @@
 
 ---
 
-You can add this file via GitHub:
-1. **Add file → Create new file**  
-2. Name it `radio_button_testing.md`  
-3. Paste the content above  
-4. Commit to `main`  
 
-If you like, I can also bundle this into your repo’s ZIP and send it to you so you just push. Do you want me to zip it now?
-::contentReference[oaicite:0]{index=0}
