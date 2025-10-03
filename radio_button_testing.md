@@ -37,4 +37,77 @@
 
 ---
 
+## Detailed Notes for Each Test Case
+
+### RB_01 — Default state
+- When the page loads, **no radio button should be preselected**.  
+- This ensures users start with a neutral state and must explicitly choose.  
+- If any option is already selected, it may mislead users or cause incorrect assumptions.
+
+---
+
+### RB_02 — Select “Yes”
+- Clicking on “Yes” should mark the radio button as selected.  
+- A message box should update with the exact text: **“You have selected Yes”**.  
+- This validates that the selection triggers the expected event and UI feedback.
+
+---
+
+### RB_03 — Select “Impressive”
+- Similar to RB_02 but validates another option.  
+- After clicking, “Impressive” must be selected and message must show **“You have selected Impressive”**.  
+- Confirms that each option has a unique and correct output message.
+
+---
+
+### RB_04 — Selecting “No” (disabled)
+- The “No” radio button is visibly present but **disabled**.  
+- Clicking should have **no effect**: no highlight, no message update.  
+- Confirms that disabled options cannot be interacted with, preventing user confusion.
+
+---
+
+### RB_05 — Switching selection
+- Selecting “Yes” first, then “Impressive” should **deselect “Yes”**.  
+- Radio buttons must enforce **mutual exclusivity** — only one selection at a time.  
+- Verifies correct group behavior of radio buttons.
+
+---
+
+### RB_06 — Re-click same selected
+- Clicking an already selected option (“Yes” when “Yes” is active) should not change state.  
+- Message should remain unchanged.  
+- This ensures stability and avoids unnecessary re-triggering of events.
+
+---
+
+### RB_07 — Message accuracy
+- After each selection, message text must be **exactly correct**:  
+  - “You have selected Yes”  
+  - “You have selected Impressive”  
+- This test checks for typos, case-sensitivity, spacing, and punctuation issues.
+
+---
+
+### RB_08 — Rapid selection changes
+- Quickly clicking between “Yes” and “Impressive” multiple times should result in a **stable final state**.  
+- The last clicked option should remain selected and message should match.  
+- Helps ensure no lag, freeze, or incorrect dual-selection bug occurs.
+
+---
+
+### RB_09 — Browser back/forward behavior
+- After selecting an option, refreshing or navigating away then back should reset the page state.  
+- This validates how the application handles **session persistence**.  
+- In demo environments, selections usually reset (expected behavior).  
+
+---
+
+### RB_10 — Accessibility / keyboard
+- Users should be able to tab into the radio group and use **Space/Enter** to select.  
+- Focus highlight should be visible.  
+- Message box should update same as with mouse click.  
+- Confirms accessibility compliance for keyboard-only and assistive technology users.
+
+---
 
