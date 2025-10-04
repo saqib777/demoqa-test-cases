@@ -12,3 +12,5 @@ The goal of this project is to design test cases, execute them, and document bug
 - `bug_report.md` → Contains bugs/issues found during testing.
 - `11_alerts_testing.md` → Contains test cases for the DemoQA Alerts page.
 - `text_box_testing.md` → Contains test cases for the DemoQA Text Box page.
+- `radio_button_testing.md` → Contains test cases for radio buttons.
+- `webtables_testing.md` → Contains test cases for testing tables. 
