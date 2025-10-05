@@ -91,3 +91,20 @@ Accessibility testing ensures inclusivity. Here, the tester navigates to each bu
 ### TC_09 — Long Press / Hold Action
 **Explanation:**  
 This test validates behavior for prolonged button press (press and hold). Since the UI is designed to respond to discrete click events, holding the mouse button should **not** produce multiple or repeated triggers. The button should register it as a single click (if released normally) or no click (if not released). This confirms
+
+---
+
+## 🏁 End Notes
+
+This test suite provides a detailed and realistic approach to validating button functionality under multiple interaction patterns.  
+The Buttons page at [DemoQA](https://demoqa.com/buttons) may appear simple, but it’s an excellent module for testing **event handling**, **UI state management**, **user interaction diversity**, and **accessibility compliance**.
+
+When maintaining this test file:
+- Re-run tests after browser updates or framework changes.
+- Use automation scripts to simulate human interactions consistently.
+- Record expected and actual results side by side to improve documentation quality.
+- Keep this page as a reference for validating button behavior in future web UI projects — especially for regression testing or framework migrations.
+
+> ✅ Well-structured button tests not only validate functionality but also improve confidence in the system’s responsiveness, accessibility, and stability.
+
+---
