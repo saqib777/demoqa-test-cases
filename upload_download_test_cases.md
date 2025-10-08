@@ -62,7 +62,7 @@ Below is a sample set of test cases. Each test case includes its **ID, Descripti
 
 ## Example Automation Snippets (Pseudo / Playwright style)
 
-```python
+> python
 # Example: Download using Playwright
 with page.expect_download() as download_info:
     page.locator("a:has-text('Download')").click()
@@ -70,3 +70,22 @@ download = download_info.value
 path = download.path()
 assert download.suggested_filename == "sampleFile.jpeg"
 # Optionally read content and verify length or checksum
+
+**Additional Considerations & Tips**
+
+1. Timeouts & waits: After triggering download, the script must wait until the file is fully saved; without waiting, the test may close early, causing failures. 
+Stack Overflow
+
+2. Download behavior in headless / CI: In headless browser mode or CI environments, download directory configuration is necessary (e.g. setting download.default_directory in Chrome).
+
+3. Cross-browser file name handling: Some browsers do not include space in suffix filenames (e.g. file(1).jpg) — adapt tests accordingly.
+
+4. File upload field hidden: Some UI designs hide the <input type="file"> behind styled elements; you may need to trigger it via JS or expose underlying input.
+
+5. Permission / sandbox issues: In secure environments, writing to default download folder may be restricted — tests need sandbox awareness.
+
+5. Logging & artifact capture: On failure, capture screenshots, console logs, and file existence logs to debug issues.
+
+6. Versioning of sample file: Use a stable sample file version for download validation, so it doesn’t change and break tests.
+
+
