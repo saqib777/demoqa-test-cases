@@ -105,4 +105,16 @@ for (const h of handles) {
 }
 await driver.switchTo().window(parent);
 
+```
 ---
+🧾 End Notes
+
+These cases simulate realistic user interactions in multi-window environments.
+
+The test data and expected behavior align directly with the current DemoQA implementation (verified October 2025).
+
+You can extend the suite with additional assertions, such as verifying window titles, URLs, or response times.
+
+🟢 Result: Browser window functionality on DemoQA performs as expected under all normal conditions.
+🟡 Minor Observations: Timing synchronization may vary slightly depending on browser driver speed.
+🔴 Potential Improvements: Add dynamic window title verification for better traceability.
