@@ -98,3 +98,10 @@ public class SelectMenuTests {
         if (driver != null) driver.quit();
     }
 }
+
+```
+
+End Note
+
+────────────────────────────────────────────
+This test plan and automation blueprint covers all selectable elements on the DemoQA select menu page, including native and custom components, single and multi-select behavior, keyboard accessibility, edge cases, and basic security checks. Following this ensures comprehensive coverage for functional validation, UI consistency, and automation readiness. Always validate locators against the live DOM, and combine UI verification with underlying DOM checks to ensure robust test results.
