@@ -66,3 +66,17 @@ assert 'selected' in item4.get_attribute('class')
 # Drag select (if supported)
 actions.drag_and_drop(item3, item6).perform()
 # Or use click and move
+```
+
+```
+WebElement item1 = driver.findElement(By.xpath("//li[text()='Item 1']"));
+item1.click();
+assertTrue(item1.getAttribute("class").contains("selected"));
+
+Actions builder = new Actions(driver);
+WebElement item2 = driver.findElement(By.xpath("//li[text()='Item 2']"));
+WebElement item4 = driver.findElement(By.xpath("//li[text()='Item 4']"));
+builder.keyDown(Keys.CONTROL).click(item2).click(item4).keyUp(Keys.CONTROL).build().perform();
+assertTrue(item2.getAttribute("class").contains("selected"));
+assertTrue(item4.getAttribute("class").contains("selected"));
+```
