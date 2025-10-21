@@ -80,3 +80,10 @@ builder.keyDown(Keys.CONTROL).click(item2).click(item4).keyUp(Keys.CONTROL).buil
 assertTrue(item2.getAttribute("class").contains("selected"));
 assertTrue(item4.getAttribute("class").contains("selected"));
 ```
+
+End Notes
+
+The “Selectable” component is deceptively simple, but supports a rich set of interactions (click, multi-select, drag, keyboard) all of which must behave consistently, responsively, and accessibly.
+Testing it ensures that end-users can reliably pick one or multiple items, using whichever device or input method they prefer.
+Any regression in this component (especially after script or layout changes) can degrade UX significantly — for example, missing multi-select support will frustrate power users.
+Therefore it is wise to include this component in both functional test suits and regression automation.
