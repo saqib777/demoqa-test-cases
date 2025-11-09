@@ -1,58 +1,101 @@
-# DemoQA Form Testing
+<div align="center"> 
+  
+# DemoQA Test Cases
+</div>
 
-This repository contains manual testing documentation and test-case designs for the DemoQA practice site:
-https://demoqa.com
+This repository contains a complete collection of **manual test cases** created for the various modules available on the [DemoQA Practice Site](https://demoqa.com/).  
+The purpose of this project is to provide a well-structured reference for testers, students, and QA professionals to understand how real-world test documentation is written.
 
-## Project purpose
-- Design and document manual test cases for UI components on the DemoQA site.
-- Capture bugs, observations, and reproducible steps.
-- Provide a reference for future automation and learning.
+---
 
-## Repository contents
-Below is the current set of documentation files in this repository.
+## About the Repository
 
-- `test_cases.md` — Test cases for the Automation Practice Form.
-- `bug_report.md` — Issues and bug reports discovered during testing.
-- `11_alerts_testing.md` — Test cases for Alerts and modal dialogues.
-- `browser_windows_testing.md` — Test cases for opening and managing windows/tabs.
-- `buttons_testing.md` — Test cases for various button interactions.
-- `checkbox_testing.md` — Test cases for checkbox behaviors.
-- `dynamic_properties_testing.md` — Tests for elements whose properties change with time.
-- `links_testing.md` — Tests for links (valid/broken).
-- `radio_button_testing.md` — Test cases for radio button interactions.
-- `text_box_testing.md` — Tests for text input and form submission.
-- `upload_download_test_cases.md` — Tests for uploading and downloading files.
-- `webtables_testing.md` — Tests for web tables CRUD operations.
+Each `.md` file in this repository represents a specific feature or component from the DemoQA website.  
+Every file includes:
+- Well-defined **test cases**
+- Detailed **test steps**
+- Expected and actual results
+- Clear **status tracking**
+- Notes and validations for UI and functional testing  
 
-If any filename is different in your repo, use the actual filename.
+The format followed for all test cases:
 
-## How this repo is organized
-- Each `.md` file is a standalone testing document:
-  - page description and purpose
-  - preconditions and environment
-  - detailed test cases (ID, steps, expected result, notes)
-  - occasional automation snippets and advice
-- `bug_report.md` contains logged issues and steps-to-reproduce.
+| Sl. No. | DATE | Application | Test Case ID | Test Case Name | Module / Feature | Test Step No. | Step Description | Keyword (Action) | Test Object / Element | Input Data | Expected Result | Actual Result | Status (Pass/Fail) | Comments / Notes | Elapsed Time |
+|----------|------|--------------|---------------|----------------|------------------|----------------|------------------|------------------|------------------------|-------------|-----------------|----------------|--------------------|------------------|---------------|
 
-## How to contribute
-1. Create a new branch: `git checkout -b feature/<short-description>`
-2. Add or update `.md` content.
-3. Commit with a meaningful message: `git commit -am "Add <file>: <short description>"`
-4. Push branch and open a pull request for review.
+---
 
-## Recommended improvements (next steps)
-- Add screenshots for failing tests and expected behavior.
-- Add a top-level `README_images/` folder to store evidence screenshots.
-- Add a `CONTRIBUTING.md` that states format and naming conventions for tests.
-- Add a `tests/` folder later if you add automation scripts.
-- Add simple status badges (e.g., manual test coverage, last run date).
+## Covered Modules
 
-## Notes & good practices
-- Keep test cases atomic and traceable (one check per test).
-- Use explicit waits in automation for dynamic elements (avoid hard sleeps).
-- When adding automation, store test data separately from the code.
-- Keep the README updated when adding or renaming files.
+- **Alerts** — Validation of all alert types and responses  
+- **Text Box** — Input validation, field mapping, and UI alignment  
+- **Buttons** — Functional testing for all button click actions  
+- **Checkbox** — Verification of parent-child checkbox relationships  
+- **Radio Button** — Radio button selection logic and behavior  
+- **Web Tables** — CRUD operations on dynamic table data  
+- **Upload/Download** — File upload and download handling tests  
+- **Browser Windows** — Handling of new tabs and windows  
+- **Dynamic Properties** — Element state change testing  
+- **Frames & Nested Frames** — Frame switching and data validation  
+- **Modal Dialogs** — Validation of modal size, content, and dismissal  
+- **Accordions** — Expand/collapse consistency checks  
+- **Tabs** — Navigation and content rendering tests  
+- **Menu** — Mouse hover and navigation flow validation  
+- **Selectable** — List/grid selection logic and state validation  
+- **Droppable & Draggable** — Drag-and-drop interaction tests  
+- **Date Picker** — Date and time input consistency  
+- **Book Store Application** — Login, book search, profile management, and API tests  
 
-## License
-This project is available under the MIT License. Use and adapt for learning and educational purposes.
+---
 
+## Purpose
+
+This repository is designed to:
+- Help QA professionals practice **manual test case design**
+- Support students in learning **end-to-end test documentation**
+- Provide reusable **test case templates** for common UI features
+- Demonstrate **modular test organization** and naming conventions
+
+---
+
+## Folder Structure
+
+```
+demoqa-test-cases/
+│
+├── alerts_testing.md
+├── text_box_testing.md
+├── checkbox_testing.md
+├── buttons_testing.md
+├── webtables_testing.md
+├── upload_download_test_cases.md
+├── browser_window_testing.md
+├── dynamic_properties_testing.md
+├── modal_dialog_testing.md
+├── frames_testing.md
+├── nested_frames_testing.md
+├── droppable_testing.md
+├── draggable_testing.md
+├── tabs_testing.md
+├── menu_testing.md
+├── selectable_testing.md
+├── date_picker_testing.md
+├── book_page_testing.md
+└── bug_report.md
+```
+
+---
+
+## Notes
+
+- All test cases are written following **industry-standard manual testing practices**.
+- Each file can be directly exported into an Excel or Test Management Tool.
+- This repository will continue to expand as new DemoQA components are tested.
+
+---
+
+### Maintainer
+
+**Created and maintained by:** [Saqib777](https://github.com/saqib777)  
+**Project:** DemoQA Test Documentation  
+**Focus:** Real-world manual test cases for practice and learning.
